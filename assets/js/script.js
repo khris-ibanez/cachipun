@@ -5,6 +5,7 @@ var ganadas=0;
 var perdidas=0;
 var empates=0
 var centinela=0;
+debugger;
 while (centinela<cantidadjugadas){
     var datojugador=parseInt(prompt(`ingrese un numero del 0 al 2 siendo: 0 = piedra, 1 = papel y 2 = tijeras.`));
     if(datojugador==0){
@@ -49,13 +50,13 @@ while (centinela<cantidadjugadas){
         centinela++;
         perdidas++;
     }
-    else if(datojugador!=1||2||3){
-        alert(`Error en la matrix`)
-    }
-    else{
-        alert(`Haz ganado ya que, Tijeras le gana a papel.`)
+    else if(datojugador==2&&datocpu==1){
+        alert(`Haz ganado ya que, tijeras le gana papel`);
         centinela++;
         ganadas++;
+    }
+    else{
+        alert(`Error en la matrix`)
     }
 }
 alert(`Cantidad jugada: ${cantidadjugadas}.`);
